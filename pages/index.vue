@@ -4,7 +4,6 @@
         <div class="flotante p-4">
             <h3>Scrolling Div Horizontal</h3>
             <h4>FLOTANTE CONTENIDO</h4>
-
             <ul>
                 <li class=" mb-2 w-100"><a href="#box1" @click="collapseShow1()"> Titular 1</a>
                     <Transition>
@@ -16,36 +15,38 @@
                         <p v-if="show2==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
                     </Transition>
                 </li>
-                <li class=" mb-2 w-100"><a href="#box2" @click="collapseShow3()"> Titular 3</a>
-                  <Transition>
-                      <p v-if="show3==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
-                  </Transition>
-              </li>
-              <li class=" mb-2 w-100"><a href="#box2" @click="collapseShow4()"> Titular 4</a>
-                <Transition>
-                    <p v-if="show4==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
-                </Transition>
-            </li>
-            <li class=" mb-2 w-100"><a href="#box2" @click="collapseShow5()"> Titular 5</a>
-              <Transition>
-                  <p v-if="show5==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
-              </Transition>
-          </li>
-          <li class=" mb-2 w-100"><a href="#box2" @click="collapseShow6()"> Titular 6</a>
-            <Transition>
-                <p v-if="show6==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
-            </Transition>
-        </li>
+                <li class=" mb-2 w-100"><a href="#box3" @click="collapseShow3()"> Titular 3</a>
+                    <Transition>
+                        <p v-if="show3==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
+                    </Transition>
+                </li>
+                <li class=" mb-2 w-100"><a href="#box4" @click="collapseShow4()"> Titular 4</a>
+                    <Transition>
+                        <p v-if="show4==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
+                    </Transition>
+                </li>
+                <li class=" mb-2 w-100"><a href="#box5" @click="collapseShow5()"> Titular 5</a>
+                    <Transition>
+                        <p v-if="show5==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
+                    </Transition>
+                </li>
+                <li class=" mb-2 w-100"><a href="#box6" @click="collapseShow6()"> Titular 6</a>
+                    <Transition>
+                        <p v-if="show6==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
+                    </Transition>
+                </li>
             </ul>
         </div>
-        <div class="item" id="box1">box-1</div>
-        <div class="item" id="box2">box-2</div>
-        <div class="item" id="box3">box-3</div>
+        <div class="item" id="box1">
+          <h1>CONTENIDO DEL BOX1</h1>
+        </div>
+        <div class="item" id="box2"><h1>CONTENIDO DEL BOX2</h1></div>
+        <div class="item" id="box3"><h1>CONTENIDO DEL BOX3</h1></div>
         <div class="item" id="box4">
             <Slider></Slider>
         </div>
-        <div class="item" id="box5">box-5</div>
-        <div class="item" id="box6">box-6</div>
+        <div class="item" id="box5"><h1>CONTENIDO DEL BOX5</h1></div>
+        <div class="item" id="box6"><h1>CONTENIDO DEL BOX6</h1></div>
     </div>
 
 </div>
