@@ -2,16 +2,40 @@
 <div>
     <div class="wrapper">
         <div class="flotante p-4">
-           <h3>Scrolling Div Horizontal</h3>
+            <h3>Scrolling Div Horizontal</h3>
             <h4>FLOTANTE CONTENIDO</h4>
 
             <ul>
-                <li class="btn btn-dark mb-2 w-100"><a href="#box1"> Box 1</a></li>
-                <li class="btn btn-dark mb-2 w-100"><a href="#box2"> Box 2</a></li>
-                <li class="btn btn-dark mb-2 w-100"><a href="#box3"> Box 3</a></li>
-                <li class="btn btn-dark mb-2 w-100"><a href="#box4"> Box 4</a></li>
-                <li class="btn btn-dark mb-2 w-100"><a href="#box5"> Box 5</a></li>
-                <li class="btn btn-dark mb-2 w-100"><a href="#box6"> Box 6</a></li>
+                <li class=" mb-2 w-100"><a href="#box1" @click="collapseShow1()"> Titular 1</a>
+                    <Transition>
+                        <p v-if="show==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
+                    </Transition>
+                </li>
+                <li class=" mb-2 w-100"><a href="#box2" @click="collapseShow2()"> Titular 2</a>
+                    <Transition>
+                        <p v-if="show2==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
+                    </Transition>
+                </li>
+                <li class=" mb-2 w-100"><a href="#box2" @click="collapseShow3()"> Titular 3</a>
+                  <Transition>
+                      <p v-if="show3==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
+                  </Transition>
+              </li>
+              <li class=" mb-2 w-100"><a href="#box2" @click="collapseShow4()"> Titular 4</a>
+                <Transition>
+                    <p v-if="show4==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
+                </Transition>
+            </li>
+            <li class=" mb-2 w-100"><a href="#box2" @click="collapseShow5()"> Titular 5</a>
+              <Transition>
+                  <p v-if="show5==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
+              </Transition>
+          </li>
+          <li class=" mb-2 w-100"><a href="#box2" @click="collapseShow6()"> Titular 6</a>
+            <Transition>
+                <p v-if="show6==true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, suscipit cursus dictum ut, pellentesque nec augue. Suspendisse felis arcu, malesuada sed nisl et, consectetur dapibus diam</p>
+            </Transition>
+        </li>
             </ul>
         </div>
         <div class="item" id="box1">box-1</div>
@@ -29,19 +53,87 @@
 
 <script>
 export default {
-    name: 'IndexPage'
+    name: 'IndexPage',
+    data() {
+        return {
+            show: false,
+            show2: false,
+            show3: false,
+            show4: false,
+            show5: false,
+            show6: false,
+
+        }
+    },
+    methods: {
+        collapseShow1() {
+            this.show = true;
+            this.show2 = false;
+            this.show3 = false;
+            this.show4 = false;
+            this.show5 = false;
+            this.show6 = false;
+
+        },
+        collapseShow2() {
+            this.show = false;
+            this.show2 = true;
+            this.show3 = false;
+            this.show4 = false;
+            this.show5 = false;
+            this.show6 = false;
+
+        },
+        collapseShow3() {
+            this.show = false;
+            this.show2 = false;
+            this.show3 = true;
+            this.show4 = false;
+            this.show5 = false;
+            this.show6 = false;
+
+        },
+        collapseShow4() {
+            this.show = false;
+            this.show2 = false;
+            this.show3 = false;
+            this.show4 = true;
+            this.show5 = false;
+            this.show6 = false;
+
+        },
+        collapseShow5() {
+            this.show = false;
+            this.show2 = false;
+            this.show3 = false;
+            this.show4 = false;
+            this.show5 = true;
+            this.show6 = false;
+
+        },
+        collapseShow6() {
+            this.show = false;
+            this.show2 = false;
+            this.show3 = false;
+            this.show4 = false;
+            this.show5 = false;
+            this.show6 = true;
+
+        },
+    }
 }
 </script>
 
 <style>
-li{
-  list-style: none;
+li {
+    list-style: none;
 
 }
-a{
-  color:#fff;
-  text-decoration: none;
-  
+
+a {
+    color: #fff;
+    text-decoration: none;
+
 }
 
 html {
@@ -50,7 +142,6 @@ html {
 
 .wrapper {
     max-height: 100vh;
-    border: 1px solid #ddd;
     display: flex;
     overflow-x: hidden !important;
     overflow-y: hidden !important;
@@ -106,5 +197,16 @@ html {
 
 #box6 {
     background-color: green;
+}
+
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 0.2s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
 }
 </style>
